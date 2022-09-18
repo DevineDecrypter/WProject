@@ -4,8 +4,8 @@ class ExerciseModel (
     private var id: Int,
     private var name: String,
     private var image: Int,
-    private var isCompleted: Boolean,
-    private var isSelected: Boolean
+    private var isCompleted: Boolean = false,
+    private var isSelected: Boolean = false
 ){
     fun getId(): Int {
         return id

@@ -16,10 +16,24 @@
         app:titleTextColor="@color/coloPrimary"
         />
 
+    <ImageView
+        android:id="@+id/ivExercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_jumping_jacks"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/tbExercise"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvTitle"
+        />
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivExercise"
         app:layout_constraintBottom_toTopOf="@+id/flProgressBar"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,6 +44,7 @@
         />
 
     <FrameLayout
+        android:layout_margin="15dp"
         android:id="@+id/flProgressBar"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -74,5 +89,28 @@
 
 
     </FrameLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvUpcoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPCOMING EXERCISE:"
+        app:layout_constraintTop_toBottomOf="@id/flProgressBar"
+        android:gravity="center"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvExerciseNameComing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExerciseName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUpcoming"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
