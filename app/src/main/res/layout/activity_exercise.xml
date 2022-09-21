@@ -107,10 +107,22 @@
         android:layout_height="wrap_content"
         android:text="ExerciseName"
         app:layout_constraintTop_toBottomOf="@+id/tvUpcoming"
+        app:layout_constraintBottom_toTopOf="@id/rvExerciseStatus"
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExerciseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExerciseNameComing"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
