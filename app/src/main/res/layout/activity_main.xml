@@ -41,47 +41,96 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/flStart"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         >
 
-        <FrameLayout
-            android:id="@+id/flBMI"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_margin="15dp"
-            android:background="@drawable/green_background_bmi"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
             >
 
+            <FrameLayout
+                android:id="@+id/flBMI"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/green_background_bmi"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMI"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    />
+
+            </FrameLayout>
+
             <TextView
+                android:id="@+id/tvCalculator"
                 android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
-                android:text="BMI"
+                android:text="Calculator"
                 android:layout_gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="25sp"
                 />
 
-        </FrameLayout>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvCalculator"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:text="Calculator"
-            android:layout_gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            />
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            >
+
+            <FrameLayout
+                android:id="@+id/flHistory"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/green_background_bmi"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_calendar_today_24"
+                    android:layout_gravity="center"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
